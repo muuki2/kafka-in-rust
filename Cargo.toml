@@ -1,0 +1,54 @@
+[workspace]
+members = [
+    "crates/commons",
+    "crates/kafka_layer", 
+    "crates/producer_service",
+    "crates/consumer_service",
+    "crates/cli",
+]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.79"
+authors = ["Kafka-Rust Team"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/yourusername/kafka-in-rust"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.39", features = ["full"] }
+tokio-util = "0.7"
+
+# Kafka
+rdkafka = { version = "0.36", default-features = false }
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Configuration
+config = "0.14"
+dotenvy = "0.15"
+
+# Observability  
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["json", "env-filter"] }
+prometheus = "0.13"
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# Utils
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# HTTP (for health checks)
+axum = "0.7"
+tower = "0.4"
+
+# Testing
+testcontainers = "0.15" 

@@ -1,0 +1,24 @@
+[package]
+name = "cli"
+version = "0.1.0"
+edition.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+commons = { path = "../commons" }
+producer_service = { path = "../producer_service" }
+consumer_service = { path = "../consumer_service" }
+tokio = { workspace = true }
+anyhow = { workspace = true }
+clap = { workspace = true }
+
+[[bin]]
+name = "ingest"
+path = "src/bin/ingest.rs"
+
+[[bin]]
+name = "process"
+path = "src/bin/process.rs" 
