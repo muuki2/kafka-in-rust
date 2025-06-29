@@ -2,8 +2,8 @@
 
 #![warn(missing_docs)]
 
-pub mod producer;
 pub mod consumer;
+pub mod producer;
 
+pub use consumer::*;
 pub use producer::*;
-pub use consumer::*; 

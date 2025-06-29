@@ -68,7 +68,7 @@ impl Default for AppConfig {
             },
             producer: ProducerConfig {
                 events_topic: "events".to_string(),
-                retry_topic: "retry".to_string(), 
+                retry_topic: "retry".to_string(),
                 dlq_topic: "dlq".to_string(),
                 delivery_timeout_ms: 120_000,
             },
@@ -84,4 +84,4 @@ impl Default for AppConfig {
             },
         }
     }
-} 
+}

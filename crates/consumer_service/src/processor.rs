@@ -17,7 +17,7 @@ impl ConsumerService {
             consumer: KafkaConsumer::new()?,
         })
     }
-    
+
     /// Start processing events
     pub async fn start_processing(&self) -> Result<()> {
         loop {
@@ -27,10 +27,10 @@ impl ConsumerService {
             }
         }
     }
-    
+
     /// Process a single event
     async fn process_event(&self, _event: EventEnvelope) -> Result<()> {
         // TODO: Implement event processing logic
         Ok(())
     }
-} 
+}

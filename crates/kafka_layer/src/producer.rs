@@ -13,10 +13,10 @@ impl KafkaProducer {
     pub fn new() -> Result<Self> {
         Ok(Self {})
     }
-    
+
     /// Send an event to Kafka
     pub async fn send_event(&self, _event: &EventEnvelope) -> Result<()> {
         // TODO: Implement actual Kafka producer logic
         Ok(())
     }
-} 
+}

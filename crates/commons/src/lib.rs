@@ -6,4 +6,4 @@ pub mod config;
 pub mod models;
 
 pub use config::*;
-pub use models::*; 
+pub use models::*;

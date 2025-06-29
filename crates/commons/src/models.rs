@@ -22,11 +22,7 @@ pub struct EventEnvelope {
 
 impl EventEnvelope {
     /// Create a new event envelope
-    pub fn new(
-        tenant_id: String,
-        event_type: String,
-        payload: serde_json::Value,
-    ) -> Self {
+    pub fn new(tenant_id: String, event_type: String, payload: serde_json::Value) -> Self {
         Self {
             id: uuid::Uuid::new_v4().to_string(),
             tenant_id,
@@ -36,9 +32,9 @@ impl EventEnvelope {
             version: "1.0".to_string(),
         }
     }
-    
+
     /// Get partition key for Kafka partitioning
     pub fn partition_key(&self) -> String {
         format!("{}|{}", self.tenant_id, self.event_type)
     }
-} 
+}

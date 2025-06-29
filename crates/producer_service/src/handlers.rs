@@ -17,9 +17,9 @@ impl ProducerService {
             producer: KafkaProducer::new()?,
         })
     }
-    
+
     /// Send an event
     pub async fn send_event(&self, event: EventEnvelope) -> Result<()> {
         self.producer.send_event(&event).await
     }
-} 
+}

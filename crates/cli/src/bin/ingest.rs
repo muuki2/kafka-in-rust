@@ -6,4 +6,4 @@ use anyhow::Result;
 async fn main() -> Result<()> {
     println!("Ingest CLI - Coming in Week 3!");
     Ok(())
-} 
+}
